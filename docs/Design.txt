@@ -1,0 +1,3 @@
+Reading and writting will be done in C++.
+
+In rust I will write a library that will handle the processing of data.
