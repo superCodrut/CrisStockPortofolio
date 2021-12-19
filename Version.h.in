@@ -1,0 +1,3 @@
+// the configured options and settings for StockPortofolio
+#define StockPortofolio_VERSION_MAJOR @StockPortofolio_VERSION_MAJOR@
+#define StockPortofolio_VERSION_MINOR @StockPortofolio_VERSION_MINOR@
