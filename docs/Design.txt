@@ -1,3 +1,46 @@
 Reading and writting will be done in C++.
 
 In rust I will write a library that will handle the processing of data.
+
+Requirements for V1.0
+1. I want to read data from a file and put the data in the memory of the program.
+2. Format of the input file:
+	2.1 Each line should contain the name of the company, the ticker symbol, type of transaction (BUY/SELL), currency I bought/sold, curency I bought/sold vs. RON, day, month, year, number of shares, total comission paid.
+3. After initial data is read from file, I want to calculate Total price in currency, Total price in RON, Total comission in RON for each transaction
+4. I want to display all data that I read from file and the data I calculated.
+5. I want to display how many stocks I own for a ticker symbol.
+	5.1 I want the stocks to take into consideration if I sold a stock.
+6. I want to display how many stocks I own for all ticket symbols.
+7. I want to add parameters so I can choose when to read or reload the input data.
+8. I want to make the app to run in a while loop and to display commands that I can give.
+9. I want to read data from another input file with the stock price of a ticker symbol from a given day.
+	9.1 Each line in this new file should have the ticker symbol, day, month, year, stock price, currency, currency vs. ron.
+10. I want to display all the data for a given ticker symbol.
+11. I want to display all the data that was read for the current stock price.
+12. I want to display the data that I read from the first file only for a given symbol.
+13. For a given ticker symbol I want to get the profit in currency, the profit in currency if I consider the buy comission, % gain in currency, % gain in currency if I consider the buy comission, proffit in RON, profit in RON if I consider the buy comission, % gain in RON and % gain in RON if I consider the buy comission.
+14. For a ticker symbol, if I sold for that symbol, for every time I sold the symbol, I want to see the profit in currency, profit in currency considering the buy and sell comission, % gain in currency, % gain in currency considering the buy and sell comission, profit in RON, profit in RON considering buying and selling commision, % gain in RON and % gain in RON considering the buying and selling comisions.
+15. For a given year, I want to display all the transactions that I did.
+16. For a given year, I want to display all the BUY or SELL transactions.
+17. For a given year, I want to display all the transactions for all the ticker symbols that I sold in that year. I want to see all the buy and sell transcations for that ticker symbol in that year or before that year, I want to see the profit for the ticker symbol when I sold and I want to see the total profit/loss in that year for all the ticker symbols that I bought.
+
+
+
+
+
+
+
+Requirements for V2.0
+1. Handle ticker symbol change
+2. Create chart based on what stock exchange has the company listed.
+3. Add up all the comisions that I paid
+4. Show percentage of the total comissions.
+5. Add information about the brokerage firm that I used.
+6. Check if company name is different from previous transactions.
+7. Add file validations for the first file.
+9. Add file validations for the 2nd file.
+
+
+
+Requirement for V3.0 - handle LSEG investments
+1. 
