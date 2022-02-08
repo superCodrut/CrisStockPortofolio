@@ -16,7 +16,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 configure_file(Version.h.in Version.h)
 
 # add the executable
-add_executable(${target_name} Main.cpp)
+add_executable(${target_name} Main.cpp ReadData.cpp)
 
 
 target_include_directories(${target_name} PUBLIC
