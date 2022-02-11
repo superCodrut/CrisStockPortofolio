@@ -58,10 +58,28 @@ double Transacation::getCurencyConversion () {
 	return curencyConversion;
 }
 
-void Transacation::setDay (int);
-int Transacation::getDay ();
-void Transacation::setMonth (int);
-int Transacation::getMonth ();
-void Transacation::setYear (int);
-int Transacation::getYear ();
+void Transacation::setDay (int day) {
+	day = day;
+}
+
+int Transacation::getDay () {
+	return day;
+}
+
+void Transacation::setMonth (int m) {
+	month = m;
+}
+
+int Transacation::getMonth () {
+	return month;
+}
+
+void Transacation::setYear (int y) {
+	year = y;
+}
+
+int Transacation::getYear () {
+	return year;
+}
+
 
