@@ -39,6 +39,7 @@ Requirements for V2.0
 6. Check if company name is different from previous transactions.
 7. Add file validations for the first file.
 9. Add file validations for the 2nd file.
+10. Check to not have a SEL before a buy.
 
 
 
