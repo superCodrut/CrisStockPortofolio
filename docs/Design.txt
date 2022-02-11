@@ -5,7 +5,7 @@ In rust I will write a library that will handle the processing of data.
 Requirements for V1.0
 1. I want to read data from a file and put the data in the memory of the program.
 2. Format of the input file:
-	2.1 Each line should contain the name of the company, the ticker symbol, type of transaction (BUY/SELL), currency I bought/sold, curency I bought/sold vs. RON, day, month, year, number of shares, total comission paid.
+	2.1 Each line should contain the name of the company, the ticker symbol, type of transaction (BUY/SELL), currency I bought/sold, curency I bought/sold vs. RON, day, month, year, number of shares, price for a share, total comission paid.
 3. After initial data is read from file, I want to calculate Total price in currency, Total price in RON, Total comission in RON for each transaction
 4. I want to display all data that I read from file and the data I calculated.
 5. I want to display how many stocks I own for a ticker symbol.
