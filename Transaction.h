@@ -22,7 +22,7 @@ class Transaction {
 		int			month;
 		int			year;
 	public:
-		Transacation();
+		Transaction();
 		~Transaction();
 		Transaction (string, string, TransactionType, Curency,
 				double, int, int, int);

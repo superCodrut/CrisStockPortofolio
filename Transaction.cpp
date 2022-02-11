@@ -2,11 +2,11 @@
 #include "Transaction.h"
 
 
-Transacation::Transacation() {}
+Transaction::Transaction() {}
 
-Transacation::~Transaction() {}
+Transaction::~Transaction() {}
 
-Transacation::Transaction (string name, string symbol, TransactionType t,
+Transaction::Transaction (string name, string symbol, TransactionType t,
 	       Curency c, double conv, int d, int m, int y) {
 	companyName = name;
 	companySymbol = symbol;
@@ -18,67 +18,67 @@ Transacation::Transaction (string name, string symbol, TransactionType t,
 	year = y;
 }
 
-void Transacation::setCompanyName (string name) {
+void Transaction::setCompanyName (string name) {
 	companyName = name;
 }
 
-string Transacation::getCompanyName () {
+string Transaction::getCompanyName () {
 	return companyName;
 }
 
-void Transacation::setCompanySymbol (string s) {
+void Transaction::setCompanySymbol (string s) {
 	companySymbol = s;
 }
 
-string Transacation::getCompanySymbol () {
-	return cumpanySymbol;
+string Transaction::getCompanySymbol () {
+	return companySymbol;
 }
 
-void Transacation::setType (TransactionType t) {
+void Transaction::setType (TransactionType t) {
 	type = t;
 }
 
-TransactionType Transacation::getType () {
+TransactionType Transaction::getType () {
 	return type;
 }
 
-void Transacation::setCurency (Curency c) {
+void Transaction::setCurency (Curency c) {
 	curency = c;
 }
 
-Curency Transacation::getCurency () {
+Curency Transaction::getCurency () {
 	return curency;
 }
 
-void Transacation::setCurencyConversion (double co) {
+void Transaction::setCurencyConversion (double co) {
 	curencyConversion = co;
 }
 
-double Transacation::getCurencyConversion () {
+double Transaction::getCurencyConversion () {
 	return curencyConversion;
 }
 
-void Transacation::setDay (int day) {
+void Transaction::setDay (int day) {
 	day = day;
 }
 
-int Transacation::getDay () {
+int Transaction::getDay () {
 	return day;
 }
 
-void Transacation::setMonth (int m) {
+void Transaction::setMonth (int m) {
 	month = m;
 }
 
-int Transacation::getMonth () {
+int Transaction::getMonth () {
 	return month;
 }
 
-void Transacation::setYear (int y) {
+void Transaction::setYear (int y) {
 	year = y;
 }
 
-int Transacation::getYear () {
+int Transaction::getYear () {
 	return year;
 }
 
