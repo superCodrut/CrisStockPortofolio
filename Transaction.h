@@ -1,12 +1,15 @@
+#ifndef _TRANSACTION_H__
+#define _TRANSACTION_H__
+
 
 #include <iostream>
 #include <string>
 
 
+#include "Utils.h"
+
 using namespace std;
 
-enum TRANSCATION_TYPE {BUY, SELL};
-enum Curency {USD, RON, EURO};
 
 class Transaction {
 	private:
@@ -42,3 +45,6 @@ class Transaction {
 		int getYear ();
 
 };
+
+
+#endif
