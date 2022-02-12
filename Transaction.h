@@ -57,6 +57,7 @@ class Transaction {
 		static Currency stringToCurrency(string);
 		static string transactionTypeToString (TransactionType);
 		static string currencyToString (Currency);
+		void printTransaction();
 
 };
 

@@ -154,3 +154,18 @@ Currency Transaction::stringToCurrency(string currency) {
 	return NON_CURRENCY;
 }
 
+void Transaction::printTransaction() {
+	cout << companyName << "\t\t"
+		<< companySymbol << "\t\t"
+		<< Transaction::transactionTypeToString(type) <<"\t\t"
+		<< Transaction::currencyToString(currency) << "\t\t"
+		<< currencyConversion << "\t\t"
+		<< day << "\t\t"
+		<< month << "\t\t"
+		<< year << "\t\t"
+		<< no_shares << "\t\t"
+		<< price << "\t\t"
+		<< comission;
+
+	cout << "\n";
+}
