@@ -40,6 +40,9 @@ Requirements for V2.0
 7. Add file validations for the first file.
 9. Add file validations for the 2nd file.
 10. Check to not have a SEL before a buy.
+11. Add exceptions for wrong Transactions input file.
+12. Add exceptions if the input file is not set.
+13. Add exceptions if the output file is not set when needed.
 
 
 
