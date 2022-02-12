@@ -43,6 +43,7 @@ Requirements for V2.0
 11. Add exceptions for wrong Transactions input file.
 12. Add exceptions if the input file is not set.
 13. Add exceptions if the output file is not set when needed.
+14. Add percentage of transaction that represint the comission.
 
 
 
