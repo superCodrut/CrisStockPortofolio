@@ -63,8 +63,8 @@ void ReadTransactions::getTransactions (vector<Transaction *> transactions) {
 		boost::to_upper(split[SYMBOL]);
 		Transaction *t = new Transaction(split[COMPANY],
 			       split[SYMBOL],
-			       stringToTransactionType(split[TYPE]),
-			       stringToCurrency(split[CURRENCY]),
+			       Transaction::stringToTransactionType(split[TYPE]),
+			       Transaction::stringToCurrency(split[CURRENCY]),
 			       stod(split[CURRENCY_CONVERSION]),
 			       stoi(split[DAY]),
 			       stoi(split[MONTH]),
@@ -75,48 +75,6 @@ void ReadTransactions::getTransactions (vector<Transaction *> transactions) {
 		transactions.push_back(t);
 
 	}
-}
-
-TransactionType ReadTransactions::stringToTransactionType(string type) {
-	boost::to_upper(type);
-	if (type == string("SELL"))
-		return SELL;
-	else if ( type == string("BUY"))
-		return BUY;
-	return NON_TYPE;
-}
-
-string ReadTransactions::transactionTypeToString(TransactionType t) {
-	switch (t) {
-		case SELL:
-			return string("SELL");
-		case BUY:
-			return string("BUY");
-	}
-	return string("NON_TYPE");
-}
-
-string ReadTransactions::currencyToString (Currency c) {
-	switch (c) {
-		case USD:
-			return string("USD");
-		case RON:
-			return string("RON");
-		case EURO:
-			return string("EURO");
-	}
-	return string ("NON_CURRENCY");
-}
-
-Currency ReadTransactions::stringToCurrency(string currency) {
-	boost::to_upper(currency);
-	if (currency == string("USD"))
-		return USD;
-	if (currency == string("RON"))
-		return RON;
-	if (currency == string("EURO"))
-		return EURO;
-	return NON_CURRENCY;
 }
 
 vector<string> ReadTransactions::splitLine(string line) {

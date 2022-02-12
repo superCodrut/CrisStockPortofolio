@@ -112,3 +112,45 @@ double Transaction::getComission () {
 }
 
 
+TransactionType Transaction::stringToTransactionType(string type) {
+	boost::to_upper(type);
+	if (type == string("SELL"))
+		return SELL;
+	else if ( type == string("BUY"))
+		return BUY;
+	return NON_TYPE;
+}
+
+string Transaction::transactionTypeToString(TransactionType t) {
+	switch (t) {
+		case SELL:
+			return string("SELL");
+		case BUY:
+			return string("BUY");
+	}
+	return string("NON_TYPE");
+}
+
+string Transaction::currencyToString (Currency c) {
+	switch (c) {
+		case USD:
+			return string("USD");
+		case RON:
+			return string("RON");
+		case EURO:
+			return string("EURO");
+	}
+	return string ("NON_CURRENCY");
+}
+
+Currency Transaction::stringToCurrency(string currency) {
+	boost::to_upper(currency);
+	if (currency == string("USD"))
+		return USD;
+	if (currency == string("RON"))
+		return RON;
+	if (currency == string("EURO"))
+		return EURO;
+	return NON_CURRENCY;
+}
+

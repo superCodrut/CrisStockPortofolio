@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <boost/algorithm/string.hpp>
 
 
 #include "Utils.h"
@@ -52,6 +53,10 @@ class Transaction {
 		double getPriceOfShare ();
 		void setComission (double);
 		double getComission ();
+		static TransactionType stringToTransactionType(string);
+		static Currency stringToCurrency(string);
+		static string transactionTypeToString (TransactionType);
+		static string currencyToString (Currency);
 
 };
 
