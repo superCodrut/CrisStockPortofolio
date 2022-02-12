@@ -31,6 +31,8 @@ class ReadTransactions: public FileHandler {
 		vector<string> splitLine(string);
 		TransactionType stringToTransactionType(string);
 		Currency stringToCurrency(string);
+		string transactionTypeToString (TransactionType);
+		string currencyToString (Currency);
 	public:
 		ReadTransactions();
 		ReadTransactions(string, string);

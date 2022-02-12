@@ -86,6 +86,28 @@ TransactionType ReadTransactions::stringToTransactionType(string type) {
 	return NON_TYPE;
 }
 
+string ReadTransactions::transactionTypeToString(TransactionType t) {
+	switch (t) {
+		case SELL:
+			return string("SELL");
+		case BUY:
+			return string("BUY");
+	}
+	return string("NON_TYPE");
+}
+
+string ReadTransactions::currencyToString (Currency c) {
+	switch (c) {
+		case USD:
+			return string("USD");
+		case RON:
+			return string("RON");
+		case EURO:
+			return string("EURO");
+	}
+	return string ("NON_CURRENCY");
+}
+
 Currency ReadTransactions::stringToCurrency(string currency) {
 	boost::to_upper(currency);
 	if (currency == string("USD"))
