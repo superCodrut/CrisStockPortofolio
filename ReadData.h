@@ -30,7 +30,7 @@ class ReadTransactions: public FileHandler {
 	private:
 		vector<string> splitLine(string);
 		TransactionType stringToTransactionType(string);
-		Curency stringToCurency(string);
+		Currency stringToCurrency(string);
 	public:
 		ReadTransactions();
 		ReadTransactions(string, string);

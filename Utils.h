@@ -2,8 +2,8 @@
 #define _UTILS_H__
 
 enum TransactionType {BUY, SELL, NON_TYPE};
-enum Curency {USD, RON, EURO, NON_CURRENCY};
-enum TransactionInformation {COMPANY, SYMBOL, TYPE, CURENCY,
-	CURENCY_CONVERSION, DAY, MONTH, YEAR, NO_SHARES, PRICE, COMISSION};
+enum Currency {USD, RON, EURO, NON_CURRENCY};
+enum TransactionInformation {COMPANY, SYMBOL, TYPE, CURRENCY,
+	CURRENCY_CONVERSION, DAY, MONTH, YEAR, NO_SHARES, PRICE, COMISSION};
 
 #endif

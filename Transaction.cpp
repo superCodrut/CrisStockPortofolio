@@ -7,13 +7,13 @@ Transaction::Transaction() {}
 Transaction::~Transaction() {}
 
 Transaction::Transaction (string name, string symbol, TransactionType t,
-	       Curency c, double conv, int d, int m, int y, int shares,
+	       Currency c, double conv, int d, int m, int y, int shares,
 	       double p, double com) {
 	companyName = name;
 	companySymbol = symbol;
 	type = t;
-	curency = c;
-	curencyConversion = conv;
+	currency = c;
+	currencyConversion = conv;
 	day = d;
 	month = m;
 	year = y;
@@ -47,20 +47,20 @@ TransactionType Transaction::getType () {
 	return type;
 }
 
-void Transaction::setCurency (Curency c) {
-	curency = c;
+void Transaction::setCurrency (Currency c) {
+	currency = c;
 }
 
-Curency Transaction::getCurency () {
-	return curency;
+Currency Transaction::getCurrency () {
+	return currency;
 }
 
-void Transaction::setCurencyConversion (double co) {
-	curencyConversion = co;
+void Transaction::setCurrencyConversion (double co) {
+	currencyConversion = co;
 }
 
-double Transaction::getCurencyConversion () {
-	return curencyConversion;
+double Transaction::getCurrencyConversion () {
+	return currencyConversion;
 }
 
 void Transaction::setDay (int day) {

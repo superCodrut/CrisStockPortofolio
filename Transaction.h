@@ -16,8 +16,8 @@ class Transaction {
 		string			companyName;
 		string			companySymbol;
 		TransactionType		type;
-		Curency			curency;
-		double			curencyConversion;
+		Currency			currency;
+		double			currencyConversion;
 		int			day;
 		int			month;
 		int			year;
@@ -27,7 +27,7 @@ class Transaction {
 	public:
 		Transaction();
 		~Transaction();
-		Transaction (string, string, TransactionType, Curency,
+		Transaction (string, string, TransactionType, Currency,
 				double, int, int, int, int, double, double);
 
 		void setCompanyName (string);
@@ -36,10 +36,10 @@ class Transaction {
 		string getCompanySymbol ();
 		void setType (TransactionType);
 		TransactionType getType ();
-		void setCurency (Curency);
-		Curency getCurency ();
-		void setCurencyConversion (double);
-		double getCurencyConversion ();
+		void setCurrency (Currency);
+		Currency getCurrency ();
+		void setCurrencyConversion (double);
+		double getCurrencyConversion ();
 		void setDay (int);
 		int getDay ();
 		void setMonth (int);

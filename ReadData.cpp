@@ -64,8 +64,8 @@ void ReadTransactions::getTransactions (vector<Transaction *> transactions) {
 		Transaction *t = new Transaction(split[COMPANY],
 			       split[SYMBOL],
 			       stringToTransactionType(split[TYPE]),
-			       stringToCurency(split[CURENCY]),
-			       stod(split[CURENCY_CONVERSION]),
+			       stringToCurrency(split[CURRENCY]),
+			       stod(split[CURRENCY_CONVERSION]),
 			       stoi(split[DAY]),
 			       stoi(split[MONTH]),
 			       stoi(split[YEAR]),
@@ -86,7 +86,7 @@ TransactionType ReadTransactions::stringToTransactionType(string type) {
 	return NON_TYPE;
 }
 
-Curency ReadTransactions::stringToCurency(string currency) {
+Currency ReadTransactions::stringToCurrency(string currency) {
 	boost::to_upper(currency);
 	if (currency == string("USD"))
 		return USD;
