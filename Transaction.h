@@ -21,11 +21,14 @@ class Transaction {
 		int			day;
 		int			month;
 		int			year;
+		int			no_shares;
+		double			price;
+		double			comission;
 	public:
 		Transaction();
 		~Transaction();
 		Transaction (string, string, TransactionType, Curency,
-				double, int, int, int);
+				double, int, int, int, int, double, double);
 
 		void setCompanyName (string);
 		string getCompanyName ();
@@ -43,6 +46,12 @@ class Transaction {
 		int getMonth ();
 		void setYear (int);
 		int getYear ();
+		void setNoOfShares (int);
+		int getNoOfShares ();
+		void setPriceOfShare (double);
+		double getPriceOfShare ();
+		void setComission (double);
+		double getComission ();
 
 };
 
