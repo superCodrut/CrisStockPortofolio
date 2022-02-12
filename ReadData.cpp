@@ -56,7 +56,7 @@ ReadTransactions::ReadTransactions(string input, string output) {
 
 ReadTransactions::~ReadTransactions() {}
 
-void ReadTransactions::getTransactions (vector<Transaction *> transactions) {
+void ReadTransactions::getTransactions (vector<Transaction *> *transactions) {
 	for (string tran: getAllLinesFromInputFile()) {
 		auto split = splitLine(tran);
 		boost::to_upper(split[COMPANY]);
@@ -72,7 +72,7 @@ void ReadTransactions::getTransactions (vector<Transaction *> transactions) {
 			       stoi(split[NO_SHARES]),
 			       stod(split[PRICE]),
 			       stod(split[COMISSION]) );
-		transactions.push_back(t);
+		transactions->push_back(t);
 
 	}
 }

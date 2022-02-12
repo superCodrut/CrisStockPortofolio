@@ -33,6 +33,6 @@ class ReadTransactions: public FileHandler {
 		ReadTransactions();
 		ReadTransactions(string, string);
 		~ReadTransactions();
-		void getTransactions (vector<Transaction *>);
+		void getTransactions (vector<Transaction *> *);
 };
 #endif
