@@ -1,6 +1,9 @@
 #ifndef _READDATA_CPP__
 #define _READDATA_CPP__
 
+#include <sstream>
+#include <boost/algorithm/string.hpp>
+
 // local libraries
 #include "ReadData.h"
 
@@ -36,12 +39,73 @@ vector<string> FileHandler::getAllLinesFromInputFile() {
 	string line;
 
 	inputFile.open(inputFileName);
-	while (inputFile) {
-		getline(inputFile, line);
+	while (getline(inputFile, line) ) {
 		allLines.push_back(line);
 	}
 	inputFile.close();
 	return allLines;
+}
+
+
+
+ReadTransactions::ReadTransactions() {}
+
+ReadTransactions::ReadTransactions(string input, string output) {
+	FileHandler(input, output);
+}
+
+ReadTransactions::~ReadTransactions() {}
+
+void ReadTransactions::getTransactions (vector<Transaction *> transactions) {
+	for (string tran: getAllLinesFromInputFile()) {
+		auto split = splitLine(tran);
+		boost::to_upper(split[COMPANY]);
+		boost::to_upper(split[SYMBOL]);
+		Transaction *t = new Transaction(split[COMPANY],
+			       split[SYMBOL],
+			       stringToTransactionType(split[TYPE]),
+			       stringToCurency(split[CURENCY]),
+			       stod(split[CURENCY_CONVERSION]),
+			       stoi(split[DAY]),
+			       stoi(split[MONTH]),
+			       stoi(split[YEAR]),
+			       stoi(split[NO_SHARES]),
+			       stod(split[PRICE]),
+			       stod(split[COMISSION]) );
+		transactions.push_back(t);
+
+	}
+}
+
+TransactionType ReadTransactions::stringToTransactionType(string type) {
+	boost::to_upper(type);
+	if (type == string("SELL"))
+		return SELL;
+	else if ( type == string("BUY"))
+		return BUY;
+	return NON_TYPE;
+}
+
+Curency ReadTransactions::stringToCurency(string currency) {
+	boost::to_upper(currency);
+	if (currency == string("USD"))
+		return USD;
+	if (currency == string("RON"))
+		return RON;
+	if (currency == string("EURO"))
+		return EURO;
+	return NON_CURRENCY;
+}
+
+vector<string> ReadTransactions::splitLine(string line) {
+	vector<string> splitLine;
+	stringstream ss(line);
+	while(ss.good() ) {
+		string substr;
+		getline(ss, substr, ',');
+		splitLine.push_back(substr);
+	}
+	return splitLine;
 }
 
 #endif

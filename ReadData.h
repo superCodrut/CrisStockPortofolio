@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 
+#include "Transaction.h"
+
 using namespace std;
 
 class FileHandler {
@@ -24,4 +26,15 @@ public:
 	vector<string> getAllLinesFromInputFile();
 };
 
+class ReadTransactions: public FileHandler {
+	private:
+		vector<string> splitLine(string);
+		TransactionType stringToTransactionType(string);
+		Curency stringToCurency(string);
+	public:
+		ReadTransactions();
+		ReadTransactions(string, string);
+		~ReadTransactions();
+		void getTransactions (vector<Transaction *>);
+};
 #endif
