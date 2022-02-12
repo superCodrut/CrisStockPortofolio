@@ -25,6 +25,10 @@ class Transaction {
 		int			no_shares;
 		double			price;
 		double			comission;
+		double			totalPriceCurrency;
+		double			totalPriceRon;
+		double			comissionRon;
+
 	public:
 		Transaction();
 		~Transaction();
@@ -58,6 +62,10 @@ class Transaction {
 		static string transactionTypeToString (TransactionType);
 		static string currencyToString (Currency);
 		void printTransaction();
+		double getTotalPriceCurrency();
+		double getTotalPriceRon ();
+		double getComissionRon ();
+		void calculateTotal();
 
 };
 

@@ -20,6 +20,7 @@ Transaction::Transaction (string name, string symbol, TransactionType t,
 	no_shares = shares;
 	price = p;
 	comission = com;
+	calculateTotal();
 
 }
 
@@ -160,12 +161,33 @@ void Transaction::printTransaction() {
 		<< Transaction::transactionTypeToString(type) <<"\t\t"
 		<< Transaction::currencyToString(currency) << "\t\t"
 		<< currencyConversion << "\t\t"
-		<< day << "\t\t"
-		<< month << "\t\t"
-		<< year << "\t\t"
-		<< no_shares << "\t\t"
-		<< price << "\t\t"
-		<< comission;
+		<< day << "\t"
+		<< month << "\t"
+		<< year << "\t"
+		<< no_shares << "\t"
+		<< price << "\t"
+		<< comission << "\t\t"
+		<< totalPriceCurrency << "\t\t"
+		<< totalPriceRon << "\t\t"
+		<< comissionRon;
 
 	cout << "\n";
+}
+
+double Transaction::getTotalPriceCurrency() {
+	return totalPriceCurrency;
+}
+
+double Transaction::getTotalPriceRon () {
+	return totalPriceRon;
+}
+
+double Transaction::getComissionRon () {
+	return comissionRon;
+}
+
+void Transaction::calculateTotal() {
+	totalPriceCurrency = no_shares * price;
+	totalPriceRon = totalPriceCurrency * currencyConversion;
+	comissionRon = comission * currencyConversion;
 }
